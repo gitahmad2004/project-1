@@ -1,0 +1,266 @@
+:root {
+  --primary: #536942;
+  --secondly: #ffd936;
+  --white: #efefef;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+    color: var(--white);
+}
+#main{
+  background-image: url("./Nature Website/img/main.png");
+min-height: 70vh;
+background-position: bottom center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.container{
+ max-width: 90%;
+padding: 50px;
+margin: auto;
+}
+nav{
+  display: flex;
+  justify-content: space-between; 
+  
+}
+ .menu{
+  position: absolute;
+  right: 20px;
+top: 60px;
+display: none;
+}
+.nav-list{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+
+}
+.btn {
+
+  background: transparent;
+border-radius: 5px;
+padding: 12px 20px;
+
+}
+.btn-secondly{
+color: var(--white);
+  border: 2px solid var(--white);
+
+}
+.btn-primary{
+
+  background-color: var(--secondly);
+  border: none;
+  transition: all .6s ease;
+}
+.btn-primary:hover{
+  background: transparent;
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+}
+.main-content .intro-heading, .main-heading, p {
+  color: var(--white);
+}
+.main-content .intro-heading{
+  font-size: 50px;
+}
+.main-content .main-heading {
+  font-size: 90px;
+  margin-top: -20px;
+}
+.main-content p {
+  max-width: 300px;
+  margin-bottom: 20px;
+
+}
+.service-tittle {
+  text-align: center;
+  margin-top: -20px;
+  padding: 25px;
+  
+}
+.service-tittle h1 {
+  text-transform: capitalize;
+}
+
+.service-tittle .line {
+  border-bottom: 3px solid var(--secondly);
+  border-radius: 3px;
+  text-align: center;
+  width: 50%;
+  align-items: center;
+  padding: 10px;
+}
+.services-img {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px ,1fr));
+gap: 30px;
+color: black;
+
+}
+.services-img .images img:hover{
+  transform: scale(1.04);
+  border: none;
+
+}
+.services-img .images  {
+ max-width: 100%;
+ margin-top: 20px;
+ 
+
+}
+.services-img .images img {
+  width: 100%;
+transition: transform .5s ease;
+}
+
+.services-img .images p{
+  color: black;
+}
+#question{
+  background: rgb(233, 232, 232);
+  
+}
+.question-content{
+  align-items: center;
+  text-align: center;
+ 
+}
+.question-content p {
+color: var(--primary);
+padding: 20px 0;
+font-size: 20px;
+}
+.question-content .profile h2{
+  color: var(--primary);
+}
+
+
+.question-content .profile img:hover{
+  border: none;
+}
+.question-content .profile img
+{
+  border: 4px  solid var(--secondly);
+  border-radius: 50%;
+ padding: 3px 3px;
+  transition: all 0.4s ease;
+  
+}
+body{
+  overflow-x: hidden;
+}
+#about .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 128px;
+
+}
+#about .container .about-content{
+  max-width: 500px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+#about .container .about-content h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--primary);
+
+}
+#about .container .about-content p{
+  font-size:20px ;
+  color: var(--primary);
+}
+ 
+#terminal{
+  background-image: url("./Nature Website/img/main.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding: 50px;
+color: var(--primary);
+}
+#terminal .container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  align-items:start ;
+}
+#terminal .container h1{
+  font-size: 40px;
+}
+#terminal .container h1 , p {
+  color: var(--primary);
+}
+#terminal .container  p{
+  font-size: 20px;
+}
+
+footer{
+  margin-top: -40px;
+}
+footer .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+footer .footer-links{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 30px;
+} 
+  footer .footer-links a{
+color: black;
+  }
+  @media screen  and (max-width:520px){
+    .menu{
+      display: block;
+    }
+    .nav-list{
+      flex-direction: column;
+      background: gray;
+      position: absolute;
+    top: 0;
+    right:-980px;
+    width: 50%;
+    height:100vh ;
+    padding-top: 80px;
+    }
+    .nav-list.active{
+      right: 0;
+    }
+    .nav-list li:not(:last-child) {
+      text-align: left;
+      padding: 10px 20px;
+      width: 100%;
+      border-bottom: 2px solid rgb(228, 227, 227);
+    }
+    #about .container{
+      flex-direction: column-reverse;
+      gap: 16px;
+    }
+  footer .container{
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
